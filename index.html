@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClimateWise — Chatbot for Climate Change</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="ClimateWise — an informative frontend that pairs an impressive UI with an IBM Watson Assistant chatbot focused on climate change." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🌍</div>
+        <div>
+          <h1>ClimateWise</h1>
+          <p class="tag">Ask our climate bot questions — learn causes, effects, and actions.</p>
+        </div>
+      </div>
+      <nav class="actions">
+        <button id="open-info" class="btn ghost" aria-expanded="true">Learn</button>
+        <a class="btn" href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h2 id="main-heading">Understand climate change — ask our assistant anything</h2>
+          <p class="lead">ClimateWise combines clear explanations, actionable tips, and an intelligent chatbot built with IBM Watson Assistant to help you learn about climate trends, impacts, and practical responses — locally and globally.</p>
+
+          <div class="kpis" role="list" aria-label="Key climate indicators">
+            <div class="kpi" role="listitem">
+              <div class="kpi-value">1.5°C</div>
+              <div class="kpi-label">Paris goal threshold</div>
+            </div>
+            <div class="kpi" role="listitem">
+              <div class="kpi-value">410 ppm</div>
+              <div class="kpi-label">CO₂ in atmosphere (2020s)</div>
+            </div>
+            <div class="kpi" role="listitem">
+              <div class="kpi-value">Mid-century</div>
+              <div class="kpi-label">Many countries target net-zero by this period</div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <button id="cta-open-chat" class="btn primary" aria-controls="watson-chat" aria-expanded="false">Chat with Climate Bot</button>
+            <a class="btn link" href="#how-to-help">How to help</a>
+          </div>
+
+          <div class="regional" aria-label="Regional climate snapshot">
+            <div class="stat">
+              <h4>Regional climate snapshot</h4>
+              <p style="margin:0;color:var(--muted)">
+                The region has a strong seasonal rainfall system driven by large atmospheric circulation (monsoon), and is experiencing shifts in timing and intensity that affect agriculture and water supplies. Mountain glaciers at high elevations are retreating, reducing dry-season meltwater for rivers. Coastal megacities face rising sea levels and increasing storm surge risk. Heatwaves and extreme rainfall events have become more frequent and intense in many areas.
+              </p>
+            </div>
+
+            <div class="stat">
+              <h4>Local implications</h4>
+              <ul style="margin:6px 0 0 18px;color:var(--muted)">
+                <li>Monsoon variability leads to crop yield uncertainty and strains water storage systems.</li>
+                <li>More frequent heat extremes increase health risks, especially for outdoor workers and vulnerable populations.</li>
+                <li>Coastal erosion and flooding put infrastructure and densely populated coastal zones at risk.</li>
+              </ul>
+            </div>
+
+            <div class="stat">
+              <h4>Practical local responses</h4>
+              <ul style="margin:6px 0 0 18px;color:var(--muted)">
+                <li>Expand renewable energy (solar, wind) and improve grid flexibility to reduce emissions.</li>
+                <li>Adopt water conservation measures like rainwater harvesting and recharge structures.</li>
+                <li>Promote climate-smart agriculture and reduce food loss to increase resilience.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-hidden="false">
+          <div class="chat-preview" aria-hidden="true">
+            <div class="chat-preview-header">
+              <div class="avatar">🤖</div>
+              <div>
+                <div class="name">Climate Bot</div>
+                <div class="status">Powered by IBM Watson Assistant</div>
+              </div>
+            </div>
+            <div class="chat-messages" aria-hidden="true">
+              <div class="msg bot">Hi — I can explain climate science, regional impacts, and practical steps. Try: "How will the monsoon change?"</div>
+              <div class="msg user">What can I do locally?</div>
+              <div class="msg bot">Small actions add up: save energy, adopt efficient appliances, support renewables and water conservation.</div>
+            </div>
+            <div class="chat-hint">Click "Chat with Climate Bot" to open the live assistant (floating bubble).</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="info container" id="learn">
+      <h3>Quick overview: global climate change</h3>
+      <p>Global climate change refers to long-term shifts in temperatures and weather patterns driven primarily by increased greenhouse gas concentrations from human activities such as fossil-fuel combustion, deforestation and industrial processes. These changes cause warming, sea level rise, altered precipitation patterns, and more frequent extreme events.</p>
+
+      <div class="cards-grid" role="list">
+        <article class="card" role="listitem">
+          <h4>Causes</h4>
+          <ul>
+            <li>Burning coal, oil and gas</li>
+            <li>Land-use change and deforestation</li>
+            <li>Industrial emissions and certain agricultural practices</li>
+          </ul>
+        </article>
+
+        <article class="card" role="listitem">
+          <h4>Impacts</h4>
+          <ul>
+            <li>Sea-level rise and coastal flooding</li>
+            <li>More frequent heatwaves, droughts and heavy rainfall</li>
+            <li>Threats to biodiversity and food systems</li>
+          </ul>
+        </article>
+
+        <article class="card" role="listitem">
+          <h4>What you can do</h4>
+          <ul>
+            <li>Shift to low-carbon energy and more efficient transport</li>
+            <li>Reduce, reuse, recycle and cut food waste</li>
+            <li>Support policies and investments that increase resilience and cut emissions</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="how container" id="how-to-help">
+      <h3>Simple actions you can start today</h3>
+      <div class="how-grid">
+        <div class="how-card">
+          <h5>At home</h5>
+          <p>Switch to LED lighting, improve insulation, and choose energy-efficient appliances.</p>
+        </div>
+        <div class="how-card">
+          <h5>Transport</h5>
+          <p>Walk, cycle, carpool or use public transit; reduce unnecessary vehicle trips.</p>
+        </div>
+        <div class="how-card">
+          <h5>Food & water</h5>
+          <p>Plan meals to reduce waste, favor lower-carbon foods and conserve water with simple measures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources container" id="resources">
+      <h3>Further reading & resources</h3>
+      <ul class="links">
+        <li><a href="https://www.ipcc.ch/" target="_blank" rel="noopener">IPCC — Intergovernmental Panel on Climate Change</a></li>
+        <li><a href="https://climate.nasa.gov/" target="_blank" rel="noopener">NASA Climate</a></li>
+        <li><a href="https://unfccc.int/" target="_blank" rel="noopener">UNFCCC</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> ClimateWise — Built with IBM Watson Assistant</div>
+      <div class="small">This page loads your Watson Assistant integration only when requested to open the chat.</div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
